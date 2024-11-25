@@ -21,3 +21,4 @@ for epoch in range(2):
         writer.add_images(f'Epoch: {epoch}', imgs, step)
         step += 1
 writer.close()
+
