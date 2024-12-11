@@ -23,8 +23,8 @@ class Tudui(nn.Module):
 
 
 # 测试神经网络
-if __name__ == "__main__":
-    tudui = Tudui()
-    input_data = torch.ones((64, 3, 32, 32))
-    output = tudui(input_data)
-    print(output.shape)
+# if __name__ == "__main__":
+#     tudui = Tudui()
+#     input_data = torch.ones((64, 3, 32, 32))
+#     output = tudui(input_data)
+#     print(output.shape)

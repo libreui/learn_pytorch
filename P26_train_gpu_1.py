@@ -64,8 +64,10 @@ writer = SummaryWriter('./logs/train')
 total_train_step = 0
 # 记录测试次数
 total_test_step = 0
+
 # 训练轮数
-epoch = 10
+epoch = 30
+
 for i in range(epoch):
     print(f"------第 {i+1} 轮训练开始------")
 
@@ -124,9 +126,9 @@ for i in range(epoch):
     writer.add_scalar("test_accuracy", total_accuracy/test_data_size, total_test_step)
     total_test_step += 1
 
-    torch.save(tudui, f"./models/tudui_model_{i}.pth")
+    # torch.save(tudui, f"./models/tudui_model_{i}.pth")
     # 官方推荐的方式，只保存状态数据
-    # torch.save(tudui.state_dict(), f"./models/tudui_model_{i}.pth")
+    torch.save(tudui.state_dict(), f"./models/tudui_model_{i}.pth")
     print(f"tudui_model_{i}.pth 模型已保存")
 
 writer.close()
